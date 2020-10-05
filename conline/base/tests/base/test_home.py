@@ -1,11 +1,13 @@
-import pytest
+# import pytest
 # from django.test import Client
-from django.urls import reverse
+# from django.urls import reverse
 
 # from conline.django_assertions import assert_contains
 
+
 def test_test():
     return 1
+
 
 # @pytest.fixture
 # def resp(client, db):
