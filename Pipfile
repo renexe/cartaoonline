@@ -7,11 +7,13 @@ verify_ssl = true
 flake8 = "*"
 pytest = "*"
 pytest-cov = "*"
+codecov = "*"
 
 [packages]
 django = "*"
 python-decouple = "*"
 gunicorn = "*"
+sentry-sdk = "*"
 
 [requires]
 python_version = "3.8"
