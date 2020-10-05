@@ -10,9 +10,14 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
+import os
+from functools import partial
 from pathlib import Path
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+from decouple import config, Csv
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -20,17 +25,17 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'gg5m-+(ysl#mafc39!$qy@psm3@5=)9h)u&=ijqifq#y)gb3+s'
-
+SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config('DEBUG', cast=bool)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'conline.base',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
