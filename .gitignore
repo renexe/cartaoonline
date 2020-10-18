@@ -127,3 +127,15 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# staticfiles e mediafiles
+staticfiles/
+mediafiles/
+
+# Postgres files for local development
+.pgdata/
+docker-compose.yml
+
+dbnavigator.xml
+
+/.idea/
