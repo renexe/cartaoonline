@@ -16,6 +16,8 @@ gunicorn = "*"
 sentry-sdk = "*"
 django-s3-folder-storage = "*"
 collectfast = "*"
+dj-database-url = "*"
+psycopg2 = "*"
 
 [requires]
 python_version = "3.8"
