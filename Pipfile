@@ -19,6 +19,7 @@ collectfast = "*"
 dj-database-url = "*"
 psycopg2 = "*"
 django-debug-toolbar = "*"
+pytest-django = "*"
 
 [requires]
 python_version = "3.8"
