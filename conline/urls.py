@@ -17,11 +17,9 @@ from django.conf import settings
 from django.contrib import admin
 from django.urls import path, include
 
-from conline.base.views import home
-
 urlpatterns = [
+    path('', include('conline.base.urls')),
     path('admin/', admin.site.urls),
-    path('', home),
 ]
 
 if settings.DEBUG:
